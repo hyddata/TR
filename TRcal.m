@@ -21,6 +21,7 @@ Data=[period PDaily];
 [a,~,c]=unique(Data(:,1),'rows');
 Pmax=[a, accumarray(c,Data(:,7),[],@max)];
 P=Pmax(:,2);
+% it is not limited to the 'Gamma' but 'Extreme Value', 'Weibull' , ...
 pd=fitdist(P,'Gamma');
 
 
